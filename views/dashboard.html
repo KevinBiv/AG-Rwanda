@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'hero-pattern': "url('./images/landscape.jpg')",
+                    },
+                    colors: {
+                        bgInput: 'hsl(240deg 6% 93%)',
+                        accentColor: '#007fdc',
+                        // lightAccentColor: 'rgba(78, 199, 208)',
+                        accentColorLight: 'rgba(49, 107, 131, .4)',
+                        darkerblue: 'rgba(30, 53, 92, 1)',
+                        lightblue: 'rgb(44 123 229)',
+                        lightAccentColor: 'rgba(0, 127, 220, 1)',
+                        complementary: 'rgb(208, 199, 178)',
+                        lightwhitepurple: '#fcfbfc',
+                        lighttextgray: '#B5B5B5',
+                    },
+                    width: {
+                        'w-3/20': '25%'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../public/css/createPost.css">
+    <title>Dashboard</title>
+    <style>
+        /* body {
+            background-color: red;
+        } */
+    </style>
+</head>
+
+<body class="h-screen">
+
+    <div class="flex justify-between items-center">
+
+        <div class="w-1/6 h-screen border-2 px-8 py-10 bg-lightwhitepurple">
+            <h1 class="text-4xl font-bold mb-8 text-accentColor">AG Rwanda</h1>
+            <hr>
+            <ul class="mt-8 flex flex-col justify-between items-start gap-6">
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <!-- <ion-icon name="grid-outline" class="text-lg"></ion-icon> -->
+                    <img src="./images/menu.png" alt="" class="w-4">
+                    <a href="" class="text-accentColor">Overview</a>
+                </li>
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <img src="./images/more.png" alt="" class="w-4">
+                    <a href="http://localhost:4400/posts.html">Posts</a>
+                </li>
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <img src="./images/store.png" alt="" class="w-4">
+                    <a href="">Markets</a>
+                </li>
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <img src="./images/deal.png" alt="" class="w-4">
+                    <a href="">Deals</a>
+                </li>
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <img src="./images/user.png" alt="" class="w-4">
+                    <a href="">Profile</a>
+                </li>
+                <li class="font-semibold flex justify-between items-center gap-2">
+                    <img src="./images/setting.png" alt="" class="w-4">
+                    <a href="">Settings</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="h-screen w-5/6 border-2 flex justify-between">
+            <div class="w-full px-12 w-3/4 pt-10 border-2">
+                <div class="flex justify-between items-center mb-10">
+                    <div>
+                        <h3 class="font-bold text-4xl text-darkerblue">Hello John</h3>
+                        <p class="text-sm text-lighttextgray">Let's continue growing today!</p>
+                    </div>
+                    <div class="border-2 px-3 py-2 rounded-full">
+                        <input type="text" placeholder="Search Here">
+                        <button>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                    </div>
+                    <div class="w-1/4 flex justify-between items-center text-xl">
+                        <button>
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </button>
+                        <button>
+                            <ion-icon name="add-outline"></ion-icon>
+                        </button>
+                        <button>
+                            <ion-icon name="person-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center gap-4 mb-8">
+                    <div class="bg-lightAccentColor text-white px-6 py-6 rounded-3xl">
+                        <h1>Lorem Ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit debitis commodi animi
+                            neque ea pariatur!</p>
+                        <button>Take Action</button>
+                    </div>
+                    <div class="bg-accentColor text-white px-6 py-6 rounded-3xl">
+                        <h1>Lorem Ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit debitis commodi animi
+                            neque ea pariatur!</p>
+                        <button>Take Action</button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center gap-4">
+                    <!-- <div class="">
+                        <h3 class="font-semibold text-xl mb-4">Deals</h3>
+                        <div class="px-4 flex justify-between items-center">
+                            <div class="mb-6">
+                                <p class="text-lighttextgray font-semibold">Completed Deals</p>
+                                <p class="font-bold text-2xl mb-6">23.5K</p>
+                                <div class="bg-accentColor text-white font-semibold rounded-md w-16 text-center">+20.5</div>
+                            </div>
+                            <ion-icon name="checkmark-done-outline" class="text-8xl"></ion-icon>
+                        </div>
+                    </div> -->
+                    <div class="">
+                        <div class="flex gap-2 items-center">
+                            <!-- <img src="./images/check.png" alt="" class="w-12"> -->
+                            <div>
+                                <h3 class="font-semibold text-2xl relative top-2 mb-2">Deals</h3>
+                                <p class="text-lighttextgray font-semibold text-sm">Completed and Pending Deals</p>
+                            </div>
+                        </div>
+                        <div class="px-6 mt-4">
+                            <p class="text-base font-semibold text-lighttextgray">Completed Deals: <span class="text-black text-sm">45</span></p>
+                            <p class="text-base font-semibold text-lighttextgray">Pending Deals: <span class="text-black text-sm">12</span></p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex gap-2 items-center">
+                            <!-- <img src="./images/check.png" alt="" class="w-12"> -->
+                            <div>
+                                <h3 class="font-semibold text-2xl relative top-2 mb-2">Top Produce</h3>
+                                <p class="text-lighttextgray font-semibold text-sm">Most sold produce</p>
+                            </div>
+                        </div>
+                        <div class="px-6 mt-4">
+                            <p class="text-base font-semibold text-lighttextgray">Total Sold: <span class="text-black text-sm">16.6ton</span></p>
+                            <p class="text-base font-semibold text-lighttextgray">Period: <span class="text-black text-sm">5months</span></p>
+                        </div>
+                        
+                    </div>
+                    <div class="">
+                        <div class="flex gap-2 items-center">
+                            <!-- <img src="./images/check.png" alt="" class="w-12"> -->
+                            <div>
+                                <h3 class="font-semibold text-2xl relative top-2 mb-2">Top Prospects</h3>
+                                <p class="text-lighttextgray font-semibold text-sm">Most likely to start a deal</p>
+                            </div>
+                        </div>
+                        <div class="px-6 mt-4">
+                            <p class="text-base font-semibold text-lighttextgray">Total Prospects: <span class="text-black text-sm">234</span></p>
+                            <p class="text-base font-semibold text-lighttextgray">Prospect Produce: <span class="text-black text-sm">Coffee</span></p>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class="">
+                        <div>
+                            <div class="flex justify-between items-center gap-4">
+                                <ion-icon name="leaf-outline" class="text-6xl mb-8"></ion-icon>
+                                <div class="px-4">
+                                    <h3 class="text-2xl font-bold">Top Produce</h3>
+                                    <p class="text-lighttextgray font-semibold">Most sold produce</p>
+                                </div>
+                            </div>
+                            <div class="px-3">
+                                <p class="text-base font-semibold text-lighttextgray">Total Sold: <span class="text-black text-sm">16.6ton</span></p>
+                                <p class="text-base font-semibold text-lighttextgray">Period: <span class="text-black text-sm">5months</span></p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="mt-8 text-xl font-bold">
+                    <h3 class="text-darkerblue font-bold">Top Customers</h3>
+                    <div class="px-6 mt-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-between items-center gap-4">
+                                <img src="./images/eax-logo-dark.png" alt="" class="w-16 border-2 px-2 py-2 rounded-full">
+                                <div>
+                                    <p class="text-base font-semibold">Customer Name</p>
+                                    <p class="text-lighttextgray text-xs font-semibold">East Africa Exchange</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Total Deals</p>
+                                <p class="text-lighttextgray text-xs font-semibold">15.4K</p>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Top Consumption</p>
+                                <p class="text-lighttextgray text-xs font-semibold">Coffee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 mt-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-between items-center gap-4">
+                                <img src="./images/eax-logo-dark.png" alt="" class="w-16 border-2 px-2 py-2 rounded-full">
+                                <div>
+                                    <p class="text-base font-semibold">Customer Name</p>
+                                    <p class="text-lighttextgray text-xs font-semibold">East Africa Exchange</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Total Deals</p>
+                                <p class="text-lighttextgray text-xs font-semibold">15.4K</p>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Top Consumption</p>
+                                <p class="text-lighttextgray text-xs font-semibold">Coffee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 mt-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex justify-between items-center gap-4">
+                                <img src="./images/eax-logo-dark.png" alt="" class="w-16 border-2 px-2 py-2 rounded-full">
+                                <div>
+                                    <p class="text-base font-semibold">Customer Name</p>
+                                    <p class="text-lighttextgray text-xs font-semibold">East Africa Exchange</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Total Deals</p>
+                                <p class="text-lighttextgray text-xs font-semibold">15.4K</p>
+                            </div>
+                            <div>
+                                <p class="text-base font-semibold">Top Consumption</p>
+                                <p class="text-lighttextgray text-xs font-semibold">Coffee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/3 border-2 pt-10 px-8">
+                <h3 class="text-darkerblue font-bold text-3xl mb-10">Profile</h3>
+                <div>
+                    <img src="./images/91.jpg" alt="" class="rounded-full border-2 border-accentColor px-2 py-2 mx-auto">
+                    <div class="text-center mb-2">
+                        <p class="text-3xl font-bold">John Doe</p>
+                        <p class="text-sm text-lighttextgray">Smallholder Farmer</p>
+                    </div>
+                    <div class="text-center">Lorem ipsum dolor sit amet sint temporibus saepe nobis odio consectetur adipisicing elit. Velit magnam sint temporibus saepe nobis odio dolor sit amet sint temporibus saepe nobis odio consectetur eveniet doloremque vel ut similique!</div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">Recent Activity</h3>
+                    <div class="px-6">
+                        <div class="flex gap-3 items-center mb-4">
+                            <ion-icon name="person-outline" class="text-4xl border-2 rounded-full px-px py-px border-black"></ion-icon>
+                            <div>
+                                <p class="text-base font-semibold">Amit Das <span class="font-normal">started a deal with you</span></p>
+                                <p class="text-sm text-lighttextgray font-semibold">2hr ago</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-center mb-4">
+                            <ion-icon name="person-outline" class="text-4xl border-2 rounded-full px-px py-px border-black"></ion-icon>
+                            <div>
+                                <p class="text-base font-semibold">Kayitare Keith <span class="font-normal">closed a deal with you</span></p>
+                                <p class="text-sm text-lighttextgray font-semibold">2hr ago</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-center mb-4">
+                            <ion-icon name="person-outline" class="text-4xl border-2 rounded-full px-px py-px border-black"></ion-icon>
+                            <div>
+                                <p class="text-base font-semibold">Keza Faith <span class="font-normal">interacted with your post</span></p>
+                                <p class="text-sm text-lighttextgray font-semibold">2hr ago</p>
+                            </div>
+                        </div>
+                        <!-- <div class="flex gap-3 items-center mb-4">
+                            <ion-icon name="person-outline" class="text-4xl border-2 rounded-full px-px py-px border-black"></ion-icon>
+                            <div>
+                                <p class="text-base font-semibold">Amit Das <span class="font-normal">started a deal with you</span></p>
+                                <p class="text-sm text-lighttextgray font-semibold">2hr ago</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup bg-accentColor" id="popup-1">
+        <div class="overlay">
+            <div class="content text-white">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <div class="flex justify-between gap-8">
+                    <div>
+                        <h2 class="mb-8">TODO App</h2>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi.</p>
+                        <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
+                        <div class="bottom-20 flex justify-betweeen items-center gap-12">
+                            <a href="https://kevinbiv.github.io/todo-app-with-localStorage/" target="_blank" class="btn py-2 rounded-md cursor-pointer px-6 text-accentColor bg-dominantColor">Live Project</a>
+                            <a href="https://github.com/KevinBiv/todo-app-with-localStorage" target="_blank" class="btn py-2 rounded-md cursor-pointer px-6 text-accentColor bg-dominantColor">Project Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
